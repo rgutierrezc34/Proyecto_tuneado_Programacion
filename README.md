@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/119511322/207469564-007f5b3a-1fb3-4330-ad79-778fa973c16d.png)
 
-**Determinación de volúmenes de caudales  y su ubicacion en python**
+**Determinación de volúmenes de caudales  y su ubicacion en python correcciones**
 
 Autor del proycto: Reyes Omar Gutierrez Camacho
 
@@ -69,18 +69,22 @@ Se comienza la investigación sobre librerías de Python que se puedan utilizar 
 
 1. Exportamos los datos obtenidos de las secciones a una hoja de cálculo en Excel, para tener un mejor manejo de los datos.
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 002](https://user-images.githubusercontent.com/119511322/207470375-9644986c-4294-417c-93f3-ffd79c54fdeb.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.002.png)
+
 
 *Imagen 1. Datos del canal.*
 
 2. Subimos nuestro archivo Excel a nuestro drive y procedemos a crear el código que nos permitirá graficar la sección de dicho canal ya mencionado, al código tenemos que ponerle el nombre del archivo que subimos a drive y ejecutara los datos de las secciones.
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 003](https://user-images.githubusercontent.com/119511322/207470485-6fa7e21b-7b1f-4958-aa28-73581c77bd02.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.003.png)
 
 *Imagen 2. Código grafico de secciones con el uso de la librería matplotlib.*
 
 3. Ejecutamos y nos dará el resultado de la sección referida de dicho canal graficada con el uso de las librerías.
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 004](https://user-images.githubusercontent.com/119511322/207470528-675fa154-6163-4025-bae3-7fb6842fedc3.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.004.png)
 
 *Imagen 3. Resultado grafico obtenido del código grafico de secciones.*
@@ -90,6 +94,7 @@ Se comienza la investigación sobre librerías de Python que se puedan utilizar 
 
 4. Además, este programa nos permitirá conocer dicha ubicación del canal ubicado en la 	Facultad de Ingeniería Civil. 
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 005](https://user-images.githubusercontent.com/119511322/207470586-8863cd80-97d7-4eed-bfed-fb9e8851f31c.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.005.png)
 
 *Imagen 4. Código Python geoespacial.*
@@ -97,6 +102,7 @@ Se comienza la investigación sobre librerías de Python que se puedan utilizar 
 
 La ejecución del código mostro lo siguiente:
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 006](https://user-images.githubusercontent.com/119511322/207470616-4a7d4a9b-ec1a-4efc-8235-71e927a27806.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.006.png)
 
 *Imagen 5. Código ejecutado resultado con el uso de las librerías matplotlib y basemap.*
@@ -106,21 +112,23 @@ Para el cálculo del volumen del canal en Python realizamos un código que a par
 
 5. Ya como último paso que realizamos fue crear el programa en Python para poder calcular el volumen (caudal) de dicho canal con los datos obtenidos, para realizar el código tomamos en cuenta las características de los canales y ciertos aspectos que nos parecieron interesantes para poder conocer el volumen (caudal), a partir de ciertos datos a ingresar de forma manual al programa. otra parte interesante que tiene el código de programación es que se pueden integrar los datos de manera manual, para poder así tener el manejo de los datos. 
 
-![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.007.png)*Imagen 6. Código Python Volumen canal*
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 007](https://user-images.githubusercontent.com/119511322/207470713-079838e7-62ec-4b8e-a327-cf95d1e7bb5f.png)
+![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.007.png)
 
-Resultado obtenido después de la ejecución: 
+*Imagen 6. Código Python Volumen canal*
 
+
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 008](https://user-images.githubusercontent.com/119511322/207470756-6f3f4bb3-8ab9-4e81-a732-782ce21174a4.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.008.png)
 
 *Imagen 7. Resultado código ejecutado cálculo de volúmenes*
 
 6.Se realizo también dos códigos en colab los cuales también van de entrada en nuestra parte geoespacial del proyecto realizado, el primer código realizado nos permite obtener la ubicación del lugar de estudio en un mapa interactivo implementando la librería folium.
 
-(Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.009.png)
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 009](https://user-images.githubusercontent.com/119511322/207470795-94b0014b-f6a2-40e1-8db2-b69324df0261.png)
 
+*Imagen 8. Resultado mapa interactivo con folium.*
 
-
-`         `*Imagen 8. Resultado mapa interactivo con folium.*
 
 Posteriormente se realizó un programa que, mediante las coordenadas del lugar, este te 
 arrogara datos relevantes del sitio, por ejemplo, la calle, código postal, ciudad, etc.
@@ -130,13 +138,17 @@ Las librerías utilizadas para realizar los códigos correspondientes utilizando
 - Numpy: La librería NumPy nos permitió una generación y manejo de datos extremadamente rápido. NumPy tiene su propia estructura de datos incorporada llamado arreglo que es similar a la lista normal de Python, pero puede almacenar y operar con datos de manera mucho más eficiente.
 - ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.010.png)Matplotlib: Esta librería nos ayudo a realizar el grafico de las secciones del canal. Matplotlib es una librería de Python especializada en la creación de gráficos en dos dimensiones. Permite crear y personalizar los tipos de gráficos más comunes, entre ellos: Diagramas de barras.
 
-*Imagen 9. Código ejecutado resultado con el uso de las librerías matplotlib.*
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 010](https://user-images.githubusercontent.com/119511322/207470904-44b5e559-92da-4206-8a19-689a4dfff73c.png)
+
+Imagen 9. Código ejecutado resultado con el uso de las librerías matplotlib.*
 
 - Basemap: Basemap no es exactamente una librería como tal. De hecho, es un conjunto de herramientas, una extensión, de la propia librería Matplotlib de Python.
 
 Esta librería nos fue de gran ayuda ya que nos permitió por medio del código obtener como resultado el mapa con la ubicación de dicho canal.
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 011](https://user-images.githubusercontent.com/119511322/207470939-f521a34e-d608-4a08-8713-45d414ebf343.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.011.png)
+
 
 *Imagen 10. Resultado con el uso de las librerías basemap.*
 
@@ -145,13 +157,18 @@ Esta librería nos fue de gran ayuda ya que nos permitió por medio del código 
 
 Esta librería nos ayudo a obtener la ubicación geoespacial del canal, ubicado en la Facultad de Ingeniería Civil.
 
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 012](https://user-images.githubusercontent.com/119511322/207470995-52c48412-bd32-4b59-a9d5-6070198cc5f7.png)
 ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.012.png)
+
 
 *Imagen ilustrativa 11. Resultado con el uso de las librerías Geopandas.*
 
 - GeoPy: GeoPy facilita a desarrolladores de Python localizar las coordenadas de direcciones, ciudades, países y puntos de referencia en todo el mundo mediante geocodificadores de terceros y otras fuentes de datos.
 
-La librería nos ayudó a localizar la ubicación del canal. ![](Aspose.Words.9232ef8e-3592-46eb-8b22-b0523646c43f.013.png)
+La librería nos ayudó a localizar la ubicación del canal. 
+
+![Aspose Words 9232ef8e-3592-46eb-8b22-b0523646c43f 013](https://user-images.githubusercontent.com/119511322/207471036-4cd22ffa-fc73-4b6a-808c-002292b7a8ef.png)
+
 
 *Imagen 12. Resultado con el uso de las librerías GeoPy.*
 
