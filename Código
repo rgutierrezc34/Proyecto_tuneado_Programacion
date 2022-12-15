@@ -1,0 +1,104 @@
+**Elementos**
+
+* Radio hidraulico (R)
+* Pendiente de fondo (S)
+* Base (b)
+* Tirante (y)
+* Velocidad (V)
+* Volumen (Q)
+* Coeficiente de rugosidad (n)
+"""
+
+# Datos de entrada respectivos del Canal.
+base = float(input("Base(m) : "))
+z = flotante (flotante (entrada ("Z:")))
+S = float(input("pendiente de fondo S:"))
+n = float(input("rugorosidad: "))
+y = float(input("tirante normal(m) : "))
+
+# calculos
+A = base*y+z*y**2
+P = base+2*y*(1+z**2)**.5
+R = redondo(A/P,2)
+print('El radio hidraulico es (m) : ', R)
+
+#Velocidad
+V = ronda (1/(n)*R**(2/3)*S**.5,2)
+print('La velocidad del agua es de (m/s) :', V)
+Q = redondo(V*A,2)
+print('El volumen es de (m3):',Q, '\n')
+
+#Imprimir localización del lugar
+de geopy.geocoders importar Nominatim
+geolocalizador = Nominatim()
+ubicacion = geolocalizador.reverse("19.211186523699826, -103.80443942468253")#Coordenadas del canal donde se realizo el area de estudio
+print('La direccion es:', ubicacion.address)
+print('Latitud y Longitud:', ubicacion.latitud, ubicacion.longitud)
+print(ubicacion.raw)
+
+"""**A partir de aquí son programas de visualización del área de estudio los cuales son:**
+
+
+---
+
+
+1. Codigo que grafica la forma del poligono, que es la seccion de canal donde
+se trabajo.
+2. Codigo que realiza la graficacion de la ubicacion del area donde se trabajo en un mapa, el cual contiene proyeccion ortografica.
+3. Codigo que arroja un mapa interactivo para desplazar alrededor de donde nos marca la ubicacion del canal. **texto en negro**
+**Recomendacion.**
+
+---
+
+Se aconseja instalar las librerias que estan al principio de este apartado, para que los programas corran satisfactoriamente.
+"""
+
+!pip instalar hoja
+
+!pip instalar xlrd
+
+!pip instalar mapa base
+
+# GRAFICOS REPRESENTANTES DEL CANAL.
+de archivos de importación de google.colab
+desde la unidad de importación de google.colab
+importar matplotlib.pyplot como plt
+importar pandas como pd
+importar xlrd
+
+#Representacion del canal en 2D
+unidad.mount('/gdrive')
+df= pd.read_excel('/gdrive/MyDrive/Colab Notebooks/SECCIONES/SECCIONES.xlsx',sheet_name= 'Hoja1')
+
+VALORES = df[['Cadenamientos','Cotas']]
+ax= VALORES.plot(x='Cadenamientos', y= 'Cotas',rot=0)
+plt.xlabel('Cadenamientos')
+plt.ylabel('Cotas')
+plt.mostrar
+
+#Ubicacion del canal en un mapa con proyeccion ortografica.
+importar numpy como np
+importar matplotlib.pyplot como plt
+de mpl_toolkits.basemap importar mapa base
+
+fig = plt.figure(figsize=(8, 8))
+m = Mapa base (proyección = 'orto', resolución = Ninguno,
+            ancho=8E6, alto=8E6,
+            lat_0=45, lon_0=-100,)
+m.etopo(escala=1.0, alfa=1.0)
+
+# Mapa (long, lat) a (x, y) para trazar
+x, y = m(-103.80450468775071,19.21095061186164)
+plt.plot(x, y, 'ok', tamaño de marcador=5)
+plt.text(x, y, ' Caudal_FIC', tamaño de fuente=22);
+
+#Codigo para un mapa interactivo en la ubicacion del lugar
+importar folio
+m = hoja.Mapa(
+    ubicación=[19.211249641928656, -103.80451631674501],
+    zoom_inicio=12,
+    tiles='Terreno de estambre'
+)
+tooltip = 'Canal de estudio'
+folium.Marker([19.211249641928656, -103.80451631674501], popup='Canal de estudio', tooltip=tooltip).add_to(m)
+metro
